@@ -1,0 +1,360 @@
+{
+	"info": {
+		"_postman_id": "bc523488-e8cf-460c-8903-19a941fe14fa",
+		"name": "api-auth",
+		"description": "<h1> This api uses firebase auth for authentication.</h1>\n<h3>Stacks</h3>\n<p>python</p>\n<p>flask-restful</p>\n<p>firebase_admin</p>\n<p>pyrebase</p>",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Links",
+			"item": [
+				{
+					"name": "signup",
+					"item": [
+						{
+							"name": "signup users",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"user@user.com\",\n    \"passw\":\"123456\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:6000/api/users/auth/signup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6000",
+									"path": [
+										"api",
+										"users",
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "signup users",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\":\"user@user.com\",\n    \"passw\":\"123456\"\n} ",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:6000/api/users/auth/signup",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "6000",
+											"path": [
+												"api",
+												"users",
+												"auth",
+												"signup"
+											]
+										}
+									},
+									"status": "CREATED",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "110"
+										},
+										{
+											"key": "Server",
+											"value": "Werkzeug/0.16.1 Python/3.8.5"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 22 Apr 2021 04:11:19 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"msg\": \"success\",\n    \"data\": [\n        {\n            \"email\": \"user@user.com\",\n            \"uid\": \"WKzieM3kkkhOaX6yhL7psliXCFy2\"\n        }\n    ],\n    \"status\": 201\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "users",
+					"item": [
+						{
+							"name": "user",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"user@user.com\",\n    \"passw\":\"123456\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:6000/api/users/auth",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6000",
+									"path": [
+										"api",
+										"users",
+										"auth"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "get user 200",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\":\"user@user.com\",\n    \"passw\":\"123456\"\n}\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:6000/api/users/auth",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "6000",
+											"path": [
+												"api",
+												"users",
+												"auth"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1031"
+										},
+										{
+											"key": "Server",
+											"value": "Werkzeug/0.16.1 Python/3.8.5"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 22 Apr 2021 00:14:33 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"msg\": \"success\",\n    \"data\": [\n        {\n            \"email\": \"user@user.com\",\n            \"uid\": \"2i997I34WXgz7Np73hbYbHIPHGF2\",\n            \"token\": \"eyJhbGciOiJSUzI1NiIsImtpZCI6IjJjOGUyYjI5NmM2ZjMyODRlYzMwYjg4NjVkNzI5M2U2MjdmYTJiOGYiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vdG9kby1hcGktMzA4OTE3IiwiYXVkIjoidG9kby1hcGktMzA4OTE3IiwiYXV0aF90aW1lIjoxNjE5MDUwNDczLCJ1c2VyX2lkIjoiMmk5OTdJMzRXWGd6N05wNzNoYlliSElQSEdGMiIsInN1YiI6IjJpOTk3STM0V1hnejdOcDczaGJZYkhJUEhHRjIiLCJpYXQiOjE2MTkwNTA0NzMsImV4cCI6MTYxOTA1NDA3MywiZW1haWwiOiJ1c2VyQHVzZXIuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbInVzZXJAdXNlci5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.mFgbt6Vum6xdAniRG0lVN0zbh5Sz8my4mNZcXvu63HAlnpPg0rJk7D720oP6OoIOEmP8XDE1b51OMk5a8y9FRWiXGixqO2fx9NkYV_4L_1E6VQED4zpPa9QTwufhQgazYntFXkwpxiY-W6N4SpwoLOsrCKRmcS6mgyIsbgG5vV8KQ5OOemI3CffULYEIZ2vgGHL2hm2OXB228zqjjxbFU4iMQ-qsKeRQU60h2GLINFZE-kBJ_9kowmprCVc2f5yKDlY970SndVK-pznuMzjpDUolkjKfuOWtw4g-1GtMhaeVgBT88DbMrZe5rDFaMUS6ucBTKw8G-2pccW3I4_3VAg\"\n        }\n    ],\n    \"status\": 200\n}"
+								}
+							]
+						},
+						{
+							"name": "user",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"user@user.com\",\n    \"passw\":\"123456\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:6000/api/users/auth",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6000",
+									"path": [
+										"api",
+										"users",
+										"auth"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "del user 200",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\":\"user@user.com\",\n    \"passw\":\"123456\"\n} ",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:6000/api/users/auth",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "6000",
+											"path": [
+												"api",
+												"users",
+												"auth"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "56"
+										},
+										{
+											"key": "Server",
+											"value": "Werkzeug/0.16.1 Python/3.8.5"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 22 Apr 2021 03:49:08 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"msg\": \"success\",\n    \"inf\": \"user deleted\",\n    \"status\": 200\n}"
+								}
+							]
+						},
+						{
+							"name": "user",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"user@user.com\",\n    \"passw\":\"123456\",\n    \"passw_new\":\"654321\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:6000/api/users/auth",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6000",
+									"path": [
+										"api",
+										"users",
+										"auth"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "put user 200",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\":\"user@user.com\",\n    \"passw\":\"123456\",\n    \"passw_new\":\"654321\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:6000/api/users/auth",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "6000",
+											"path": [
+												"api",
+												"users",
+												"auth"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "60"
+										},
+										{
+											"key": "Server",
+											"value": "Werkzeug/0.16.1 Python/3.8.5"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 22 Apr 2021 04:04:04 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"msg\": \"success\",\n    \"inf\": \"updated password\",\n    \"status\": 200\n}"
+								}
+							]
+						}
+					]
+				}
+			],
+			"description": "<h3>GitHub</h3>\n<a href=\"https://github.com/andrequeiroz2/api-auth\">github</a>\n<h3>DokerHub</h3>\n<a href=\"https://hub.docker.com/repository/docker/andrequeiroz2/api-auth\">dockerhub</a>"
+		}
+	]
+}

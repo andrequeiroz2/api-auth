@@ -24,4 +24,9 @@ def valid_email_passw(email, passw):
         inf = {"error": "Email invalid"}
         return inf 
     
-    
+
+def valid_body(body):
+    count = 0
+    for i in enumerate(body):
+        count += 1
+    return count
