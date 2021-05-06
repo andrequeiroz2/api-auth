@@ -13,5 +13,5 @@ passwords.txt
 **/*.class
 
 #keys firebase
-fbAdminConfig.json
-fbconfig.json
+#fbAdminConfig.json
+#fbconfig.json
