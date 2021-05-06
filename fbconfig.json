@@ -1,9 +1,9 @@
 {
-    "apiKey": "your",
-    "authDomain": "your",
-    "databaseURL": "your",
-    "projectId": "your",
-    "storageBucket": "your",
-    "messagingSenderId": "your",
-    "appId": "your"
+    "apiKey": "AIzaSyAQ74LDx8WFyV_Dk_7sKtkz1XCG0SqFRGQ",
+    "authDomain": "todo-api-308917.firebaseapp.com",
+    "databaseURL": "https://todo-api-308917-default-rtdb.firebaseio.com/",
+    "projectId": "todo-api-308917",
+    "storageBucket": "todo-api-308917.appspot.com",
+    "messagingSenderId": "799083988338",
+    "appId": "1:799083988338:web:70538d87b2a5817b5349eb"
 }
